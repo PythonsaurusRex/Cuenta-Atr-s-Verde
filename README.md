@@ -3,6 +3,5 @@ Un sitio web que explica sobre el cambio climatico y tener recomendaciones de co
 
 # Tecnologia
 Python version 3.11
-HTML + CSS + JavaScript 
+HTML + CSS + Python
 Flask
-SQLite 
