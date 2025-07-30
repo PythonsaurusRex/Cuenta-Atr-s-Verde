@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ideas para Cuidar el Medio Ambiente</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <h1>Comparte tu Idea</h1>
+
+    <!-- Formulario para escribir ideas -->
+  <form method="POST" class="formulario">
+    <textarea name="idea" placeholder="Escribe aquí tu idea..."></textarea>
+    <div class="botones">
+      <button type="submit" class="boton">Agregar Idea</button>
+    </div>
+  </form>
+
+    <!-- Lista de ideas -->
+  <h2>Ideas de los Usuarios</h2>
+  {% for idea in ideas %}
+    <div class="idea">
+      {{ idea }}
+      <a href="{{ url_for('ideas_page') }}?eliminar={{ idea }}" class="boton eliminar">Eliminar</a>
+    </div>
+  {% endfor %}
+
+  <!-- Botones para ir a otras páginas -->
+  <div class="botones">
+    <a href="/" class="boton">Volver al Inicio</a>
+    <a href="/recomendaciones" class="boton">Ver Recomendaciones</a>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 Cuenta Atrás Verde – Creado por Alejo Díaz</p>
+    <p>Contacto: +52 55 1234 5678</p>
+    <div class="redes">
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+      <a href="https://www.twitter.com" target="_blank">X</a>
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    </div>
+  </footer>
+</body>
+</html>
